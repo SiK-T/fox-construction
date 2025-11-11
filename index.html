@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fox Constructions - Building dreams, shaping futures. Professional construction services including infrastructure, buildings, and site preparation in Pakistan.">
+    <meta name="keywords" content="construction company, Fox Constructions, infrastructure, buildings, construction Pakistan">
+    <meta name="author" content="Fox Constructions Private Limited">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Fox Constructions - Building Dreams, Shaping Futures">
+    <meta property="og:description" content="Professional construction services including infrastructure, buildings, hotels, and site preparation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://foxconstructions.com">
+
+    <title>Fox Constructions - Building Dreams, Shaping Futures</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'construction-gold': '#F5B800',
+                        'charcoal-gray': '#2B2B2B',
+                        'concrete-silver': '#E5E5E5',
+                        'dark-slate': '#1E1E1E',
+                        'safety-orange': '#F97316',
+                        'off-white': '#FAFAFA'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom gradient overlay */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(245, 184, 0, 0.9) 0%, rgba(43, 43, 43, 0.85) 100%);
+        }
+
+        /* Smooth transitions */
+        * {
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile menu animation */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Sticky navbar shadow */
+        .navbar-scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-off-white text-dark-slate antialiased">
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-2">
+                    <span class="text-2xl">🦊</span>
+                    <span class="text-xl font-bold text-charcoal-gray">Fox <span class="text-construction-gold">Constructions</span></span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-dark-slate hover:text-construction-gold font-medium">Home</a>
+                    <a href="#about" class="text-dark-slate hover:text-construction-gold font-medium">About</a>
+                    <a href="#services" class="text-dark-slate hover:text-construction-gold font-medium">Services</a>
+                    <a href="#capabilities" class="text-dark-slate hover:text-construction-gold font-medium">Capabilities</a>
+                    <a href="#projects" class="text-dark-slate hover:text-construction-gold font-medium">Projects</a>
+                    <a href="#team" class="text-dark-slate hover:text-construction-gold font-medium">Our Team</a>
+                    <a href="#contact" class="bg-construction-gold text-white px-6 py-2 rounded-lg hover:bg-yellow-500 font-semibold">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-charcoal-gray focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-concrete-silver transform -translate-x-full absolute top-20 left-0 right-0 w-full">
+            <div class="container mx-auto px-4 py-6 space-y-4">
+                <a href="#home" class="block text-dark-slate hover:text-construction-gold font-medium py-2">Home</a>
+                <a href="#about" class="block text-dark-slate hover:text-construction-gold font-medium py-2">About</a>
+                <a href="#services" class="block text-dark-slate hover:text-construction-gold font-medium py-2">Services</a>
+                <a href="#capabilities" class="block text-dark-slate hover:text-construction-gold font-medium py-2">Capabilities</a>
+                <a href="#projects" class="block text-dark-slate hover:text-construction-gold font-medium py-2">Projects</a>
+                <a href="#team" class="block text-dark-slate hover:text-construction-gold font-medium py-2">Our Team</a>
+                <a href="#contact" class="block bg-construction-gold text-white px-6 py-3 rounded-lg hover:bg-yellow-500 font-semibold text-center">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-construction-gold/10 to-charcoal-gray/20">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%232B2B2B\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-black text-charcoal-gray mb-6 leading-tight">
+                    Fox <span class="text-construction-gold">Constructions</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-dark-slate/80 mb-8 font-semibold italic">
+                    "Building dreams, shaping futures<br>Fox Constructions stands strong with you."
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="bg-construction-gold text-white px-8 py-4 rounded-lg hover:bg-yellow-500 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Get Started
+                    </a>
+                    <a href="#projects" class="bg-white text-charcoal-gray px-8 py-4 rounded-lg hover:bg-concrete-silver font-bold text-lg border-2 border-charcoal-gray shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-charcoal-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- CEO Welcome Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- CEO Image Placeholder -->
+                <div class="order-2 md:order-1" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full bg-construction-gold/20 rounded-lg"></div>
+                        <div class="relative bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg overflow-hidden shadow-2xl h-96 flex items-center justify-center">
+                            <div class="text-center text-white p-8">
+                                <div class="text-6xl mb-4">👨‍💼</div>
+                                <p class="text-sm opacity-80">RAEES AKBAR</p>
+                                <p class="text-xs opacity-60">Chief Executive Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CEO Message -->
+                <div class="order-1 md:order-2" data-aos="fade-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-charcoal-gray mb-6">
+                        <span class="text-construction-gold">Welcome</span> to Fox Constructions!
+                    </h2>
+                    <div class="space-y-4 text-dark-slate/80 leading-relaxed">
+                        <p>
+                            It gives me great pleasure to introduce you to a company built on trust, hard work, and a passion for excellence. At Fox Constructions, we don't just build structures — we build dreams, shape communities, and create spaces that inspire.
+                        </p>
+                        <p>
+                            Over the years, our journey has been defined by dedication, innovation, and an unwavering commitment to quality. Every project we deliver carries our promise of safety, reliability, and lasting value. This success would not be possible without our talented team, trusted partners, and loyal clients who continue to believe in us.
+                        </p>
+                        <div class="pt-4 border-t-2 border-construction-gold mt-6">
+                            <p class="font-semibold text-charcoal-gray">With warm regards,</p>
+                            <p class="font-bold text-lg text-construction-gold">RAEES AKBAR</p>
+                            <p class="text-sm">Chief Executive Officer</p>
+                            <p class="text-sm font-medium">Fox Constructions Private Limited</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-off-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-charcoal-gray mb-4">
+                    Our <span class="text-construction-gold">Services</span>
+                </h2>
+                <p class="text-lg text-dark-slate/70 max-w-2xl mx-auto">
+                    Comprehensive construction solutions tailored to your needs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1: Infrastructure -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <span class="text-7xl">🚧</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-charcoal-gray mb-3">Infrastructure</h3>
+                        <p class="text-dark-slate/70 leading-relaxed">
+                            "From highways to bridges, we create connections that last a lifetime. Fox Constructions building the backbone of progress."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Buildings, Hotels & Colony -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-7xl">🏢</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-charcoal-gray mb-3">Buildings, Hotels & Colony</h3>
+                        <p class="text-dark-slate/70 leading-relaxed">
+                            "Modern designs, strong structures, and timeless elegance. Safe, modern, and well-planned communities for every family."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Site Preparation & Landscape -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
+                        <span class="text-7xl">🏗️</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-charcoal-gray mb-3">SITE Preparation & Landscape</h3>
+                        <p class="text-dark-slate/70 leading-relaxed">
+                            "Precision, dedication, and expertise at every step. Our sites are where blueprints turn into reality."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="py-16 bg-charcoal-gray text-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    "Fox Constructions building tomorrow, <span class="text-construction-gold">today</span>."
+                </h2>
+                <blockquote class="text-xl italic mb-4">
+                    <p class="font-semibold text-construction-gold">"Fox Constructions……Line of Trust!"</p>
+                </blockquote>
+                <p class="text-lg">
+                    <em><strong>Started more than 10 years ago with clear strategies and missions</strong></em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-charcoal-gray mb-4">
+                    Our <span class="text-construction-gold">Capabilities</span>
+                </h2>
+                <p class="text-lg text-dark-slate/70 max-w-3xl mx-auto">
+                    Fox Construction Company is a trusted leader in delivering high-quality construction solutions, blending craftsmanship, innovation, and reliability in every project we undertake.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Capability 1 -->
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 text-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4">💫</div>
+                    <h3 class="text-2xl font-bold mb-3">SELF CREATIVITY</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        At Fox Construction Company, creativity is at the heart of everything we build. We blend imaginative thinking with technical expertise, transforming ideas into innovative solutions that stand out in both design and durability.
+                    </p>
+                </div>
+
+                <!-- Capability 2 -->
+                <div class="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl p-6 text-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">🏡</div>
+                    <h3 class="text-2xl font-bold mb-3">ARCHITECT DESIGNS</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        Architectural design is more than just drawing plans — it's about creating spaces that inspire, function flawlessly, and reflect our clients' vision. From concept to completion, we develop innovative layouts and sustainable solutions.
+                    </p>
+                </div>
+
+                <!-- Capability 3 -->
+                <div class="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-6 text-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-4">🧰</div>
+                    <h3 class="text-2xl font-bold mb-3">STRONG MANAGEMENT</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        Strong management is the backbone of our success. Our CM BAIDAR BAKHT ensures every project is guided with clear vision, precise planning, and disciplined execution. We keep projects on track and budgets in control.
+                    </p>
+                </div>
+
+                <!-- Capability 4 -->
+                <div class="bg-gradient-to-br from-green-500 to-teal-500 rounded-xl p-6 text-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-4">☄️</div>
+                    <h3 class="text-2xl font-bold mb-3">PRE-CONSTRUCTION</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        Successful projects begin long before the first brick is laid. Our preconstruction services provide a solid foundation for efficiency, cost-effectiveness, and quality by refining designs and assessing budgets early.
+                    </p>
+                </div>
+
+                <!-- Capability 5 -->
+                <div class="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl p-6 text-white shadow-lg hover:shadow-2xl transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl mb-4">🚧</div>
+                    <h3 class="text-2xl font-bold mb-3">CONTRACTING</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        Our contracting services are built on trust, expertise, and a commitment to delivering excellence. We handle every stage with precision — managing procurement, coordinating teams, and ensuring compliance.
+                    </p>
+                </div>
+
+                <!-- Featured Projects CTA -->
+                <div class="bg-gradient-to-br from-construction-gold to-yellow-600 rounded-xl p-6 text-charcoal-gray shadow-lg hover:shadow-2xl transform hover:-translate-y-2 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center">
+                        <div class="text-5xl mb-4">📋</div>
+                        <h3 class="text-2xl font-bold mb-3">Featured Projects</h3>
+                        <a href="#projects" class="inline-block bg-white text-construction-gold px-6 py-3 rounded-lg font-bold hover:bg-concrete-silver">
+                            View Gallery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section id="projects" class="py-20 bg-off-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-charcoal-gray mb-4">
+                    Sample <span class="text-construction-gold">Projects</span>
+                </h2>
+                <p class="text-lg text-dark-slate/70">
+                    A showcase of our completed works
+                </p>
+            </div>
+
+            <!-- Project Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up">
+                <!-- Project Placeholders -->
+                <div class="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏗️
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-blue-300 to-blue-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏢
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-green-300 to-green-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🌉
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-orange-300 to-orange-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏘️
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-purple-300 to-purple-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏗️
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-red-300 to-red-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏭
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏗️
+                    </div>
+                </div>
+                <div class="aspect-square bg-gradient-to-br from-teal-300 to-teal-500 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 cursor-pointer">
+                    <div class="w-full h-full flex items-center justify-center text-white text-4xl">
+                        🏛️
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project CTA -->
+            <div class="mt-16 bg-construction-gold rounded-xl p-8 md:p-12 text-center" data-aos="zoom-in">
+                <h3 class="text-3xl font-bold text-charcoal-gray mb-4">
+                    Want To Proceed Your Projects with Us?
+                </h3>
+                <p class="text-dark-slate mb-6 max-w-2xl mx-auto">
+                    Get more details about our projects and capabilities so you feel comfortable contacting us...
+                </p>
+                <a href="#contact" class="inline-block bg-charcoal-gray text-white px-8 py-4 rounded-lg hover:bg-dark-slate font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-charcoal-gray mb-4">
+                    Our <span class="text-construction-gold">Team</span>
+                </h2>
+                <p class="text-lg text-dark-slate/70 max-w-3xl mx-auto">
+                    Fox Constructions, founded in 2021, became a Private Limited company shortly after its establishment. In 2024, we achieved PEC registration under the C-5 category, marking a significant milestone in our growth.
+                </p>
+            </div>
+
+            <!-- CEO -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-construction-gold/10 to-orange-100 rounded-xl p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-48 h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white text-6xl shadow-2xl flex-shrink-0">
+                            👨‍💼
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h3 class="text-3xl font-bold text-charcoal-gray mb-2">Engineer RAEES AKBAR</h3>
+                            <p class="text-construction-gold font-semibold text-lg mb-4">CEO OF FOX CONSTRUCTIONS PRIVATE LIMITED</p>
+                            <p class="text-dark-slate/80 leading-relaxed mb-4">
+                                When I founded <strong>Fox Constructions</strong>, my vision was simple yet powerful: to create a company that builds more than projects; a company that builds trust, value, and a better future. We began with infrastructure as our core focus, but through dedication, learning, and innovation, we have grown into a multi-disciplinary firm delivering excellence in buildings, dams, water projects, and complex engineering works.
+                            </p>
+                            <p class="text-dark-slate/80 leading-relaxed">
+                                "Our strength lies in three pillars: our people, our tools, and our processes. By investing in these areas, we have built a team capable of mobilizing anywhere, anytime, with precision and reliability. We take pride in our 100% project success rate and our ability to transform challenges into opportunities."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Directors -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-center text-charcoal-gray mb-8" data-aos="fade-up">Directors</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Director 1 -->
+                    <div class="bg-off-white rounded-xl p-6 shadow-lg hover:shadow-2xl" data-aos="fade-right">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full flex items-center justify-center text-white text-5xl mb-4 shadow-xl">
+                                👨‍🔧
+                            </div>
+                            <h4 class="text-2xl font-bold text-charcoal-gray mb-2">Engineer Taimoor Khan</h4>
+                            <p class="text-construction-gold font-semibold mb-3">Director</p>
+                            <p class="text-dark-slate/70 leading-relaxed">
+                                Taimoor is a highly skilled professional with 5 years of experience in civil engineering. As a Partner at Fox Constructions, he is responsible for supervising on-site teams and ensuring compliance with regulations. His expertise and attention to detail ensure every project is completed efficiently and to the highest standards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Director 2 -->
+                    <div class="bg-off-white rounded-xl p-6 shadow-lg hover:shadow-2xl" data-aos="fade-left">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white text-5xl mb-4 shadow-xl">
+                                👨‍💻
+                            </div>
+                            <h4 class="text-2xl font-bold text-charcoal-gray mb-2">Engineer Baidar Bakht</h4>
+                            <p class="text-construction-gold font-semibold mb-3">Director</p>
+                            <p class="text-dark-slate/70 leading-relaxed">
+                                With 5 years of experience in construction management, Baidar is a highly qualified specialist in charge of overseeing on-site crews and monitoring project schedules as a Partner at Fox Constructions. His dedication to producing outstanding outcomes has been essential to the company's development and success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Members -->
+            <div>
+                <h3 class="text-3xl font-bold text-center text-charcoal-gray mb-8" data-aos="fade-up">TEAM MEMBERS</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Engineer 1 -->
+                    <div class="bg-white border-2 border-concrete-silver rounded-xl p-6 hover:border-construction-gold hover:shadow-xl" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-4 shadow-lg">
+                                👷
+                            </div>
+                            <h4 class="text-xl font-bold text-charcoal-gray mb-2">Engineer Amir Shakeel</h4>
+                            <p class="text-construction-gold font-semibold text-sm mb-2">Senior Site Engineer</p>
+                            <p class="text-dark-slate/70 text-sm leading-relaxed">
+                                Master's in Construction Engineering & Management, Bachelor's in Civil Engineering. Over 10 years of experience in project execution, site supervision, and resource management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Engineer 2 -->
+                    <div class="bg-white border-2 border-concrete-silver rounded-xl p-6 hover:border-construction-gold hover:shadow-xl" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-4 shadow-lg">
+                                🏗️
+                            </div>
+                            <h4 class="text-xl font-bold text-charcoal-gray mb-2">Engineer Sibghatullah</h4>
+                            <p class="text-construction-gold font-semibold text-sm mb-2">Construction Manager</p>
+                            <p class="text-dark-slate/70 text-sm leading-relaxed">
+                                Master's in Construction Engineering & Management, Bachelor's in Civil Engineering. Over a decade of experience in leading complex construction projects with focus on quality and cost control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Engineer 3 -->
+                    <div class="bg-white border-2 border-concrete-silver rounded-xl p-6 hover:border-construction-gold hover:shadow-xl" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-4 shadow-lg">
+                                📐
+                            </div>
+                            <h4 class="text-xl font-bold text-charcoal-gray mb-2">Engineer Nouman Qamar</h4>
+                            <p class="text-construction-gold font-semibold text-sm mb-2">Project Manager</p>
+                            <p class="text-dark-slate/70 text-sm leading-relaxed">
+                                Master's in Structural Engineering, Bachelor's in Civil Engineering. Over 8 years of experience in managing large-scale projects from planning to completion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Engineer 4 -->
+                    <div class="bg-white border-2 border-concrete-silver rounded-xl p-6 hover:border-construction-gold hover:shadow-xl" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-4 shadow-lg">
+                                📊
+                            </div>
+                            <h4 class="text-xl font-bold text-charcoal-gray mb-2">Asim Javed</h4>
+                            <p class="text-construction-gold font-semibold text-sm mb-2">Senior Quantity Surveyor</p>
+                            <p class="text-dark-slate/70 text-sm leading-relaxed">
+                                Bachelor's in Mathematics, Diploma in Engineering. Over 25 years of extensive experience in cost estimation, budgeting, and contract management.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-charcoal-gray to-dark-slate text-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                        Get In <span class="text-construction-gold">Touch</span>
+                    </h2>
+                    <p class="text-lg text-white/80">
+                        Ready to start your project? We'd love to hear from you! Let's discuss how Fox Constructions can make your project a reality.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="max-w-2xl mx-auto" data-aos="fade-up">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-construction-gold">Contact Information</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-all">
+                            <div class="text-4xl flex-shrink-0">📞</div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-lg">Phone</h4>
+                                <p class="text-white/80 text-base">+92 321 9639299</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-all">
+                            <div class="text-4xl flex-shrink-0">✉️</div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-lg">Email</h4>
+                                <p class="text-white/80 text-base">foxmaps4639@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-all">
+                            <div class="text-4xl flex-shrink-0">📍</div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-lg">Location</h4>
+                                <p class="text-white/80 text-base">Office No. 5-B, Near MCB Model Town, Northern Bypass, Multan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-all">
+                            <div class="text-4xl flex-shrink-0">🤝</div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-lg">Join Our Team</h4>
+                                <p class="text-white/80 text-base">Careers@foxconstructions.pk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-slate text-white py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-2xl">🦊</span>
+                        <span class="text-xl font-bold">Fox <span class="text-construction-gold">Constructions</span></span>
+                    </div>
+                    <p class="text-white/70 leading-relaxed">
+                        Building dreams, shaping futures. Fox Constructions stands strong with you.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-construction-gold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/70 hover:text-construction-gold">Home</a></li>
+                        <li><a href="#about" class="text-white/70 hover:text-construction-gold">About Us</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-construction-gold">Services</a></li>
+                        <li><a href="#capabilities" class="text-white/70 hover:text-construction-gold">Capabilities</a></li>
+                        <li><a href="#projects" class="text-white/70 hover:text-construction-gold">Projects</a></li>
+                        <li><a href="#team" class="text-white/70 hover:text-construction-gold">Our Team</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-construction-gold">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-construction-gold">Our Services</h4>
+                    <ul class="space-y-2 text-white/70">
+                        <li>Infrastructure Development</li>
+                        <li>Buildings & Hotels</li>
+                        <li>Residential Colonies</li>
+                        <li>Site Preparation</li>
+                        <li>Landscape Design</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/60 text-sm">
+                    © 2025 Fox Construction.pk - All rights reserved. | Built with precision and care
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
