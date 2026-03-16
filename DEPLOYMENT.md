@@ -136,7 +136,7 @@ Replace the placeholder emojis with actual images:
 
 In `index.html`, search and replace:
 - `+92 (XXX) XXX-XXXX` → Your actual phone number
-- `info@foxconstructions.pk` → Your actual email
+- `foxconstruction2000@gmail.com` → Your actual email
 - `Pakistan` → Your complete address
 
 ### Changing Colors

@@ -231,7 +231,7 @@ python -m http.server 8000
 ## Support
 
 For questions or support, contact:
-- **Email:** info@foxconstructions.pk
+- **Email:** foxconstruction2000@gmail.com
 - **Website:** [Your website URL]
 
 ---
